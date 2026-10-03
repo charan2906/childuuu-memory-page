@@ -746,24 +746,6 @@ body{
 }
 
 @media(max-width:700px){
-    #messageScreen,
-    #letterScreen,
-    #pinScreen,
-    #photoScreen,
-    #memoryScreen,
-    #bondScreen,
-    #collegeScreen,
-    #sharedMemoriesScreen,
-    #supportMemoryScreen,
-    #finalScreen,
-    #promiseScreen{
-        overflow-y:auto;
-        overscroll-behavior-y:contain;
-        -webkit-overflow-scrolling:touch;
-        justify-content:safe center;
-        touch-action:pan-y;
-    }
-
     #collegeScreen{
         flex-direction:column;
         gap:18px;
@@ -888,6 +870,26 @@ body{
         padding:28px 20px;
     }
 
+}
+
+@media(max-width:700px){
+    #messageScreen,
+    #letterScreen,
+    #pinScreen,
+    #photoScreen,
+    #memoryScreen,
+    #bondScreen,
+    #collegeScreen,
+    #sharedMemoriesScreen,
+    #supportMemoryScreen,
+    #finalScreen,
+    #promiseScreen{
+        overflow-y:auto;
+        overscroll-behavior-y:contain;
+        -webkit-overflow-scrolling:touch;
+        justify-content:safe center;
+        touch-action:pan-y;
+    }
 }
 
 </style>
