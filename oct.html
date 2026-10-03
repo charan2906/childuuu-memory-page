@@ -1070,11 +1070,11 @@ body{
 
     </div>
 
-    <div id="flowerScreen" role="button" tabindex="0" aria-label="Flower surprise. Click to continue">
+    <div id="flowerScreen">
         <div class="flowerPrompt">Flowers are falling for you... 🤍</div>
     </div>
 
-    <div id="photoScreen" role="button" tabindex="0" aria-label="Your photo. Click to continue">
+    <div id="photoScreen">
         <img src="childuuu-photo.png" alt="Smiling girl holding a bouquet of roses">
         <div class="photoCaption">
             <div>The cute girl who always overthinks.</div>
@@ -1655,32 +1655,6 @@ prevSlideBtn.addEventListener("click", (event)=>{
 nextSlideBtn.addEventListener("click", (event)=>{
     event.stopPropagation();
     advanceStage();
-});
-
-app.addEventListener("click", (event)=>{
-
-    if(event.target.closest(".key") || event.target.closest(".navArrow"))
-        return;
-
-    if(pinScreen.classList.contains("show") || finalScreen.classList.contains("show"))
-        return;
-
-    advanceStage();
-
-});
-
-flowerScreen.addEventListener("keydown", (event)=>{
-    if(event.key === "Enter" || event.key === " "){
-        event.preventDefault();
-        advanceStage();
-    }
-});
-
-photoScreen.addEventListener("keydown", (event)=>{
-    if(event.key === "Enter" || event.key === " "){
-        event.preventDefault();
-        advanceStage();
-    }
 });
 
 showStage(0);
